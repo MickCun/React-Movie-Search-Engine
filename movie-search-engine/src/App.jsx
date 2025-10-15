@@ -4,18 +4,21 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import MovieCard from "./components/MovieCard";
 import Home from "./pages/home";
-import {Routes, Route} from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Favorites from "./pages/Favorites";
 import NavBar from "./components/Navbar";
 
 function App() {
   return (
-    <main className="main-content">
-      <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="/favorites" element={<Favorites />}/>
-      </Routes>
-    </main>
+    <div>
+      <NavBar />
+      <main className="main-content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/favorites" element={<Favorites />} />
+        </Routes>
+      </main>
+    </div>
   );
 }
 
